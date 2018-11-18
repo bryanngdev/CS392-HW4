@@ -1,0 +1,6 @@
+The gettimeofday() function stores the time values in seconds and microseconds in a struct, which uses
+long and int32 datatypes for seconds and microseconds respectively.
+Hence, the microseconds value overflows by crossing the 2^31-1 limit of int32 easily, and we see negative time interval values.
+
+https://blog.habets.se/2010/09/gettimeofday-should-never-be-used-to-measure-time.html
+https://stackoverflow.com/a/5362664
